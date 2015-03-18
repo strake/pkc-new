@@ -1,0 +1,23 @@
+name:                pkc
+version:             0.1.0.0
+synopsis:            Prime K Compiler
+-- description:         
+-- license:             
+license-file:        LICENSE
+author:              M Farkas-Dyck
+maintainer:          strake888@gmail.com
+-- copyright:           
+category:            Language
+build-type:          Custom
+-- extra-source-files:  
+cabal-version:       >=1.10
+
+executable pkc
+  main-is:             Main.hs
+  default-extensions:  UnicodeSyntax, LambdaCase, TypeOperators, ViewPatterns, NoMonomorphismRestriction, RankNTypes, ScopedTypeVariables, GADTs, MultiParamTypeClasses, FlexibleContexts, FlexibleInstances, PolyKinds, DataKinds, ConstraintKinds, GeneralizedNewtypeDeriving, DeriveFunctor, DeriveFoldable
+  other-modules:       Util.Pretty, Data.Token, Data.PrimOp, Data.PrimOp.Pretty, Data.Linkage, Util.Comp.Param.Multi, Util.Parse, Data.Text.Pos, Data.Syntax, Util.Parse.ToLExpr, Data.Pretty, Data.Syntax.Pretty, Lex, Parse
+  other-extensions:    TemplateHaskell, UndecidableInstances, OverlappingInstances, StandaloneDeriving, TypeFamilies, OverloadedStrings
+  build-depends:       base ==4.8.*, base-unicode-symbols, util, peano ==0.1.*, containers ==0.5.*, multiset, clist ==0.1.*, lenz ==0.1.*, lenz-monad-classes ==0.1.*, lenz-template ==0.1.*, free ==4.11.*, graph, compdata ==0.10.*, compdata-param ==0.8.*, regex-applicative, monad-classes >=0.3.1 && <0.4, transformers ==0.4.*, mainland-pretty ==0.2.*, llvm-general-pure, terminal-size
+  -- hs-source-dirs:      
+  default-language:    Haskell2010
+  ghc-options:         -fcontext-stack=48

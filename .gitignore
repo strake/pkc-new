@@ -1,0 +1,7 @@
+*.hi
+*.o
+*.dyn_*
+
+dist
+
+/Parse.hs*
